@@ -1,9 +1,8 @@
 #define LED_PIN 9
 
-String strData;
-char letter;  //переменная куда передается параметр строки
+char letter;              //переменная куда передается параметр строки
 
-class Morze              //класс Morze имеет три метода
+class Morze              //класс Morze имеет четыре метода
 {
     static void point()  //Метод, который описывает поведение ТОЧКА
     {
@@ -34,7 +33,6 @@ class Morze              //класс Morze имеет три метода
         letter = (char)Serial.read(); // принять сообщения из ком порта в переменную letter посимвольно
       }
     }
-
 
   public: static void alphabethMorze()  //Здесь описан алгоритм работы алфавита Морзе
     {
@@ -388,15 +386,14 @@ class Morze              //класс Morze имеет три метода
         Serial.println(letter);
         delay(1750);
         letter = "";
-      }
-
+      } 
     }
 };
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Hello in Morze-Code programm!"); // отправить
-  Serial.println("Please, enter you message"); // отправить
+  Serial.println("Hello in Morze-Code programm!");  
+  Serial.println("Please, enter you message");  
 }
 
 void loop() {
